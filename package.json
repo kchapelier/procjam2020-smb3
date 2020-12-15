@@ -1,0 +1,22 @@
+{
+  "name": "smb3hack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/index.js -d --s main -u crypto > build/main.js",
+    "build-prod": "browserify src/index.js -d --s main -u crypto | terser > build/main.min.js",
+    "build-board": "browserify src/index-board.js -d --s main -u crypto > build/main-board.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "terser": "^5.5.1"
+  },
+  "dependencies": {
+    "simplex-noise": "^2.4.0"
+  }
+}
